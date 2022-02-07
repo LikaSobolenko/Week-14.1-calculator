@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1420px;
+            text-align: center;
+        }
+
+        input {
+            margin: 25px;
+        }
+
+        div {
+
+            text-align: center;
+        }
+
+        #result {
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 100px;
+            border-top: 2px solid rgb(3, 3, 3);
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="number1">
+    <input type="text" id="number2">
+    <div class="move">
+        <input type="button" value="+" id="plus" onclick="plus()">
+        <input type="button" value="-" id="minus" onclick="minus()">
+        <input type="button" value="*" id="multiplication" onclick="multiplication()">
+        <input type="button" value="/" id="division" onclick="division()">
+    </div>
+    <div id="result"></div>
+
+
+    <script>
+        function plus() {
+            let a = Number(document.getElementById(`number1`).value);
+            let b = Number(document.getElementById(`number2`).value);
+            let result = a + b;
+            document.getElementById('result').innerHTML = result;
+        }
+
+        function minus() {
+            let a = Number(document.getElementById(`number1`).value);
+            let b = Number(document.getElementById(`number2`).value);
+            let result = a - b;
+            document.getElementById('result').innerHTML = result;
+        }
+
+        function multiplication() {
+            let a = Number(document.getElementById(`number1`).value);
+            let b = Number(document.getElementById(`number2`).value);
+            let result = a * b;
+            document.getElementById('result').innerHTML = result;
+        }
+
+        function division() {
+            let a = Number(document.getElementById(`number1`).value);
+            let b = Number(document.getElementById(`number2`).value);
+            let result = a / b;
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+
+</body>
+
+</html>
